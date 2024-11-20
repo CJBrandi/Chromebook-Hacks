@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
     const sidebar = document.querySelector(".sidebar");
+    const toggleSidebar = document.querySelector(".menu-toggle");
 
-    menuToggle.addEventListener("click", () => {
+    toggleSidebar?.addEventListener("click", () => {
         sidebar.classList.toggle("hidden");
     });
 });
 
-function redirectTo(page) {
-    window.location.href = page;
+function redirectToPage(page) {
+    if (page) {
+        window.location.href = page;
+    }
 }
