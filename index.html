@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
         <h1>Chromebook Exploit Guide</h1>
     </header>
     <div class="container">
@@ -23,7 +24,11 @@
         <main class="content">
             <section id="introduction">
                 <h2>Introduction</h2>
-                <p>Welcome to the Chromebook Exploit Guide! Follow the steps in each section for detailed instructions.</p>
+                <p>Welcome to the Chromebook Exploit Guide! Select the type of exploit you are interested in below:</p>
+                <div class="selector">
+                    <button onclick="redirectTo('exploit1.html')">Extension-based</button>
+                    <button onclick="redirectTo('exploit2.html')">Unenrollment-based</button>
+                </div>
             </section>
             <section id="exploit1">
                 <h2>Exploit 1</h2>
