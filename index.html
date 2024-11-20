@@ -8,39 +8,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-        <h1>Chromebook Exploit Guide</h1>
+    <header class="top-bar">
+        <div class="logo">Chromebook Exploit Guide</div>
+        <nav class="nav-links">
+            <a href="#faq">FAQ</a>
+            <a href="#troubleshooting">Troubleshooting</a>
+            <a href="#resources">Resources</a>
+            <a href="#extras">Extras</a>
+        </nav>
+        <div class="actions">
+            <button aria-label="Dark Mode Toggle">🌙</button>
+        </div>
     </header>
     <div class="container">
-        <nav class="sidebar">
+        <nav class="sidebar hidden">
             <ul>
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#exploit1">Exploit 1</a></li>
                 <li><a href="#exploit2">Exploit 2</a></li>
-                <li><a href="#resources">Resources</a></li>
             </ul>
         </nav>
         <main class="content">
             <section id="introduction">
-                <h2>Introduction</h2>
-                <p>Welcome to the Chromebook Exploit Guide! Select the type of exploit you are interested in below:</p>
+                <h1>Welcome to the Chromebook Exploit Guide</h1>
+                <p>Select the type of exploit you are interested in:</p>
                 <div class="selector">
-                    <button onclick="redirectTo('exploit1.html')">Extension-based</button>
-                    <button onclick="redirectTo('exploit2.html')">Unenrollment-based</button>
+                    <label for="exploit-selector">Choose exploit type:</label>
+                    <select id="exploit-selector" onchange="redirectToPage(this.value)">
+                        <option value="">Select...</option>
+                        <option value="exploit1.html">Extension-based</option>
+                        <option value="exploit2.html">Unenrollment-based</option>
+                    </select>
                 </div>
-            </section>
-            <section id="exploit1">
-                <h2>Exploit 1</h2>
-                <p>Details about Exploit 1 go here.</p>
-            </section>
-            <section id="exploit2">
-                <h2>Exploit 2</h2>
-                <p>Details about Exploit 2 go here.</p>
-            </section>
-            <section id="resources">
-                <h2>Resources</h2>
-                <p>Additional resources and references.</p>
             </section>
         </main>
     </div>
