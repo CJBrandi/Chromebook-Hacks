@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme-toggle");
     let isLightMode = false;
 
-    // Ensure Sidebar is Closed by Default
+    // Ensure Sidebar is Closed by Default on Load
     sidebar.classList.add("hidden");
 
     // Toggle Sidebar Visibility
@@ -12,12 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.classList.toggle("hidden");
     });
 
-    // Toggle Theme
+    // Toggle Theme (Dark and Light Mode)
     themeToggle.addEventListener("click", () => {
         isLightMode = !isLightMode;
         document.body.classList.toggle("light-mode", isLightMode);
+
+        // Update Emoji for Theme Toggle Button
         themeToggle.textContent = isLightMode ? "☀️" : "🌙";
     });
+
+    // Set the Initial State for Dark Mode Button
+    themeToggle.textContent = isLightMode ? "☀️" : "🌙";
 });
 
 // Redirect Function
