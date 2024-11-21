@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme-toggle");
     let isLightMode = false;
 
+    // Ensure Sidebar is Closed by Default
+    sidebar.classList.add("hidden");
+
     // Toggle Sidebar Visibility
     menuToggle.addEventListener("click", () => {
         sidebar.classList.toggle("hidden");
