@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.addEventListener("click", () => {
         isLightMode = !isLightMode;
         document.body.classList.toggle("light-mode", isLightMode);
-        themeToggle.textContent = isLightMode ? "🌑" : "🌙";
+        themeToggle.textContent = isLightMode ? "☀️" : "🌙";
     });
 });
 
