@@ -36,6 +36,17 @@ body {
     border-bottom: 1px solid #333;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
 .menu-toggle {
     background: none;
     border: none;
