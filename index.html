@@ -9,7 +9,10 @@
 </head>
 <body>
     <header class="top-bar">
-        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <div class="header-left">
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <h1 class="header-title">Chromebook Exploit Guide</h1>
+        </div>
         <div class="actions">
             <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
         </div>
@@ -23,23 +26,21 @@
             </ul>
         </nav>
         <main class="content">
+            <h2>Welcome to the Chromebook Exploit Guide</h2>
             <div class="warning-box">
                 <p>
                     <strong>Disclaimer:</strong> This website and its authors accept no responsibility for any damage or issues caused by the use of exploits or techniques described herein. You proceed at your own risk, and any modifications to personal devices are your responsibility.
                 </p>
             </div>
-            <section id="introduction">
-                <h1>Welcome to the Chromebook Exploit Guide</h1>
-                <p>Select the type of exploit you are interested in:</p>
-                <div class="selector">
-                    <label for="exploit-selector">Choose exploit type:</label>
-                    <select id="exploit-selector" onchange="redirectToPage(this.value)">
-                        <option value="">Select...</option>
-                        <option value="exploit1.html">Extension-based</option>
-                        <option value="exploit2.html">Unenrollment-based</option>
-                    </select>
-                </div>
-            </section>
+            <p>Select the type of exploit you are interested in:</p>
+            <div class="selector">
+                <label for="exploit-selector">Choose exploit type:</label>
+                <select id="exploit-selector" onchange="redirectToPage(this.value)">
+                    <option value="">Select...</option>
+                    <option value="exploit1.html">Extension-based</option>
+                    <option value="exploit2.html">Unenrollment-based</option>
+                </select>
+            </div>
         </main>
     </div>
     <script src="script.js"></script>
